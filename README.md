@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Laravel Leaflet JS - Example
 
 This is an example project for [Leaflet JS](https://leafletjs.com) and [OpenStreetMap](https://www.openstreetmap.org) built with Laravel 5.8.
@@ -64,3 +65,6 @@ $ vendor/bin/phpunit
 ## License
 
 This project is open-sourced software licensed under the [MIT license](LICENSE).
+=======
+# projekGoCalorie
+>>>>>>> 4cb7a17667fe9267c805895ed95034a3f622acf2
