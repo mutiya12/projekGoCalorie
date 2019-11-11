@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Buat Menu
+Edit Menu
 @stop
 
 

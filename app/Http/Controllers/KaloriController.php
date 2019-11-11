@@ -15,9 +15,9 @@ class KaloriController extends Controller
     	
 
     	if ($req->jk=="laki") {
-    		$BMR = 66.4730 + (13.7516*$req->BB) + (5.0033*$req->TB) - (6.7550*$req->UMUR) * $req->aktivitas;
+    		$BMR = 66.42 + (13.75*$req->BB) + (5 *$req->TB) - (6.78*$req->UMUR) * $req->aktivitas;
     	}else if ($req->jk=="perempuan") {
-    		$BMR = 655.0955 + (9.5634*$req->BB) + (1.8496*$req->TB) - (4.6756*$req->UMUR) * $req->aktivitas;
+    		$BMR = 655.1 + (9.65*$req->BB) + (1.85*$req->TB) - (4.68*$req->UMUR) * $req->aktivitas;
     	}
 
     	$BMR_PAGI = $BMR*30/100;

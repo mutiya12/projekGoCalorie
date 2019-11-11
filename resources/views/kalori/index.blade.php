@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Buat Ahli Gizi
+Perhitungan
 @stop
 
 
@@ -46,8 +46,8 @@ Buat Ahli Gizi
 
                 </div>
                 <div class="card-footer">
-                    <input type="submit" value="{{ __('Cari Rekomendasi') }}" class="btn btn-primary">
-                    <input type="submit" value="{{ __('Hitung ') }}" class="btn btn-primary">
+                    <input type="submit" value="{{ __('Hitung') }}" class="btn btn-primary">
+                    
                     <a href="/ahli-gizi" class="btn btn-danger float-right">{{ __('Batalkan') }}</a>
                 </div>
             </form>

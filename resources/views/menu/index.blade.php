@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Edit Artikel & Tips
+Menu makanan
 @stop
 
 
