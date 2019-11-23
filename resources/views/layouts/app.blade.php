@@ -105,6 +105,9 @@
                                     <a class="dropdown-item">
                                         {{ Auth::user()->role }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ Auth::user()->role=="ahli gizi" ? "setting-profil-ahli-gizi" : "" }} {{ Auth::user()->role=="customer" ? "setting-profil-customer" : "" }} {{ Auth::user()->role=="restoran" ? "setting-profil-rumah-makan" : "" }}">
+                                        Pengaturan
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

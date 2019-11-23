@@ -8,7 +8,7 @@ Edit Menu
 @section('content')
 
 
-@if(session('sukses'))
+    @if(session('sukses'))
     <div class="alert alert-success" >
       {{session('sukses')}}
     </div>
@@ -18,6 +18,7 @@ Edit Menu
       {{session('gagal')}}
     </div>
     @endif
+    
  <div class="col-md-6 offset-3">
         <div class="card">
             <div class="card-header">Edit Data Menu</div>

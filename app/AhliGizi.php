@@ -8,4 +8,9 @@ class AhliGizi extends Model
 {
     protected $table = 'ahligizi';
     protected $fillable = ['id','user_id','nama_lengkap','lulusan'];
+
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
 }

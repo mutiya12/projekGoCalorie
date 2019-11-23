@@ -16,9 +16,9 @@ Menu makanan
   <img class="card-img-top" src="{{$m->getAvatar()}}" alt="Card image cap" height="200px">
   <div class="card-body text-dark">
     <h5 class="card-title float-left">{{$m->nama_makanan}}</h5>
-    <p class="float-right">{{$m->harga_makanan}}</p><br>
+    <p class="float-right">Rp {{$m->harga_makanan}}</p><br>
     <br>
-    <p class="text-center">Komposii</p>
+    <p class="text-center">Komposisi</p>
     <p class=""><strong>Kalori : {{$m->getKalori()}}</strong></p>
     <p class=""><strong>Protein : {{$m->getProtein()}}</strong></p>
     <p class=""><strong>Lemak : {{$m->getLemak()}}</strong></p>

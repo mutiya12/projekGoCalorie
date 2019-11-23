@@ -29,6 +29,10 @@ class User extends Authenticatable
     ];
     public function outlet()
     {
-        $this->hasOne(Outlet::class);
+        $this->hasOne('App\Outlet');
+    }
+    public function ahli()
+    {
+        return $this->hasOne('App\AhliGizi');
     }
 }

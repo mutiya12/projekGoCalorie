@@ -50,7 +50,7 @@
                 </div>
                 <div class="card-footer">
                     <input type="submit" value="{{ __('Buat Restran') }}" class="btn btn-primary">
-                    <a href="{{ route('outlets.index') }}" class="btn btn-danger float-right">{{ __('Batalkan') }}</a>
+                    <!-- <a href="{{ route('outlets.index') }}" class="btn btn-danger float-right">{{ __('Batalkan') }}</a> -->
                 </div>
             </form>
         </div>

@@ -13,11 +13,32 @@ class KaloriController extends Controller
     public function rekom(Request $req)
     {
     	
-
+		if(empty($req->jk)){
+			return redirect()->back()->with('gagal','Silahkan pilih jenis kelamin');
+		}else if(empty($req->aktivitas)){
+			return redirect()->back()->with('gagal','Silahkan pilih jenis aktivitas');
+		}
+		else{
     	if ($req->jk=="laki") {
-    		$BMR = 66.42 + (13.75*$req->BB) + (5 *$req->TB) - (6.78*$req->UMUR) * $req->aktivitas;
+			if ($req->aktivitas=="a") {
+				$point = 1.66;
+			}else if ($req->aktivitas=="b") {
+                $point = 1.76;
+            }
+            else if ($req->aktivitas=="c") {
+                $point = 2.10;
+            }
+    		$BMR = 66.42 + (13.75*$req->BB) + (5 *$req->TB) - (6.78*$req->UMUR) * $point;
     	}else if ($req->jk=="perempuan") {
-    		$BMR = 655.1 + (9.65*$req->BB) + (1.85*$req->TB) - (4.68*$req->UMUR) * $req->aktivitas;
+            if ($req->aktivitas=="a") {
+                $point = 1.55;
+            }else if ($req->aktivitas=="b") {
+                $point = 1.70;
+            }
+            else if ($req->aktivitas=="c") {
+                $point = 2.00;
+            }
+    		$BMR = 655.1 + (9.65*$req->BB) + (1.85*$req->TB) - (4.68*$req->UMUR) * $point;
     	}
 
     	$BMR_PAGI = $BMR*30/100;
@@ -54,5 +75,6 @@ class KaloriController extends Controller
 
 
     	return view('kalori.hasilcari',compact('menuPAGI','menuSIANG','menuMALAM','BMR_PAGI_lebih','BMR_SIANG_lebih','BMR_MALAM_lebih','BMR_PAGI_kurang','BMR_SIANG_kurang','BMR_MALAM_kurang','BMR'));
-    }
+	}
+	}
 }

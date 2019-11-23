@@ -17,16 +17,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
-                <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
-                    <div class="form-group">
-                        <label for="q" class="control-label">{{ __('outlet.search') }}</label>
-                        <input placeholder="{{ __('outlet.search_text') }}" name="q" type="text" id="q" class="form-control mx-sm-2" value="{{ request('q') }}">
-                    </div>
-                    <input type="submit" value="{{ __('outlet.search') }}" class="btn btn-secondary">
-                    <a href="{{ route('outlets.index') }}" class="btn btn-link">{{ __('app.reset') }}</a>
-                </form>
-            </div>
+           
             <table class="table table-bordered table-stripped">
                 <thead>
                     <tr>
@@ -69,16 +60,7 @@
         <!-- NV -->
 <h1 class="page-title">{{ __('Restoran Belum Terverifikasi') }} <small>{{ __('app.total') }} : {{ $outlets_nv->total() }} {{ __('outlet.outlet') }}</small></h1>
         <div class="card">
-            <div class="card-header">
-                <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
-                    <div class="form-group">
-                        <label for="q" class="control-label">{{ __('outlet.search') }}</label>
-                        <input placeholder="{{ __('outlet.search_text') }}" name="q" type="text" id="q" class="form-control mx-sm-2" value="{{ request('q') }}">
-                    </div>
-                    <input type="submit" value="{{ __('outlet.search') }}" class="btn btn-secondary">
-                    <a href="{{ route('outlets.index') }}" class="btn btn-link">{{ __('app.reset') }}</a>
-                </form>
-            </div>
+            
             <table class="table table-bordered table-stripped">
                 <thead>
                     <tr>

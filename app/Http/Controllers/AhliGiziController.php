@@ -14,7 +14,8 @@ class AhliGiziController extends Controller
     public function form()
     {
     	return view('ahligizi.form');
-    }
+	}
+	
     public function create(Request $req)
     {
     	$u = new \App\User;

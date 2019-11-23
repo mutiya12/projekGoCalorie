@@ -8,7 +8,7 @@ Buat Ahli Gizi
 @section('content')
 <div class="col-md-6 offset-3">
         <div class="card">
-            <div class="card-header">Form Pengisian Data Menu</div>
+            <div class="card-header">Form Data Ahli Gizi</div>
             <form method="POST" action="/buat-ahli-gizi-baru" accept-charset="UTF-8" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
@@ -27,7 +27,7 @@ Buat Ahli Gizi
 
                 </div>
                 <div class="card-footer">
-                    <input type="submit" value="{{ __('Buat Menu') }}" class="btn btn-primary">
+                    <input type="submit" value="{{ __('Tambah') }}" class="btn btn-primary">
                     <a href="/ahli-gizi" class="btn btn-danger float-right">{{ __('Batalkan') }}</a>
                 </div>
             </form>

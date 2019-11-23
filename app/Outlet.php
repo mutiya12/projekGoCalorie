@@ -50,7 +50,7 @@ class Outlet extends Model
      */
     public function user()
     {
-        return $this->hasOne('App\User', 'foregin_key');
+        return $this->belongsTo('App\User');
     }
 
     // public function creator()
@@ -96,4 +96,8 @@ class Outlet extends Model
             return 'Tidak Mencantumkan Alamat';
         }return $this->address;
     }
+    // public function user()
+    // {
+    //     return $this->belongsTo('App\User');
+    // }
 }

@@ -47,4 +47,9 @@ class ForumController extends Controller
             ]);
         return redirect('/artikel-dan-tips');
     }
+    public function delete($id)
+    {
+        \App\Artikel::where('artikelid','=',$id)->delete();
+        return redirect()->back()->with('sukses','berhasi menghapus artikel');
+    }
 }

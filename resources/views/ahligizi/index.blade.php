@@ -12,8 +12,7 @@
 	<div class="card-body">
     <h4 class="mb-0"><a href="" class="text-dark"><strong>{{$a->nama_lengkap}}</strong></a></h4> 
     <small id="emailHelp" class="form-text text-muted mb-4">Lulusan {{$a->lulusan}}</small>
-	
-	
+    
   </div>
 </div>
 @endforeach

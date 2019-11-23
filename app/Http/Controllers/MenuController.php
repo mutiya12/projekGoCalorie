@@ -30,6 +30,10 @@ class MenuController extends Controller
     }
     public function store(Request $req)
     {
+        $a1 = $req->file('gambar')->getClientOriginalName();
+        if ((strpos($a1, "JPG") || strpos($a1, "png") || strpos($a1, "jpeg") || strpos($a1, "jpg")) == false) {
+            return redirect()->back()->with('gagal','File harus berupa png, jpg, jpeg');
+        }else{
     	$user = Auth::user();
         $resto = \App\Outlet::where('user_id','=',$user->id)->first();
 
@@ -49,6 +53,7 @@ class MenuController extends Controller
 
 
     	return redirect('/menu-makanan');
+    }
     }
     public function lokasiTinjau()
     {
@@ -83,18 +88,33 @@ class MenuController extends Controller
     }
     public function updatesNow(Request $req)
     {
-        $tempatfile = ('images');
+        $a1 = $req->file('gambar')->getClientOriginalName();
+        if ((strpos($a1, "JPG") || strpos($a1, "png") || strpos($a1, "jpeg") || strpos($a1, "jpg")) == false) {
+            return redirect()->back()->with('gagal','File harus berupa png, jpg, jpeg');
+        }else{
 
-        $gbrMakanan = $req->file('gambar');
-        $nama_GbrMakanan = $gbrMakanan->getClientOriginalName();
-        $gbrMakanan->move($tempatfile, $nama_GbrMakanan);
+        if (empty($req->file('gambar'))) {
+             \App\Menu::where('id','=',$req->idnya)
+                ->update([
+                    'nama_makanan' => $req->nama,
+                    'harga_makanan' => $req->harga,
+                ]);
+            return redirect()->back()->with('sukses','berhasil mengubah data menu'); 
+        }else{
+            $tempatfile = ('images');
 
-        \App\Menu::where('id','=',$req->idnya)
-            ->update([
-                'nama_makanan' => $req->nama,
-                'harga_makanan' => $req->harga,
-                'gambar' => $nama_GbrMakanan,
-            ]);
-        return redirect()->back()->with('sukses','berhasil mengubah data menu');    
+            $gbrMakanan = $req->file('gambar');
+            $nama_GbrMakanan = $gbrMakanan->getClientOriginalName();
+            $gbrMakanan->move($tempatfile, $nama_GbrMakanan);
+
+            \App\Menu::where('id','=',$req->idnya)
+                ->update([
+                    'nama_makanan' => $req->nama,
+                    'harga_makanan' => $req->harga,
+                    'gambar' => $nama_GbrMakanan,
+                ]);
+            return redirect()->back()->with('sukses','berhasil mengubah data menu');    
+            }
+        }
     }
 }

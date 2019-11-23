@@ -48,6 +48,10 @@ Route::get('/input-komposisi/{id}','MenuController@menuShow');
 
 Route::post('/store-kalori','MenuController@storeKalori');
 
+Route::get('/setting-profil-ahli-gizi','ProfilController@ahliGizi');
+
+Route::post('/edit-profil-ahli','ProfilController@editAhliGizi');
+
 });
 
 Route::group(['middleware' => ['auth','checkRole:restoran']], function(){
@@ -63,6 +67,10 @@ Route::post('/buat-menu-yang-baru','MenuController@store');
 Route::get('/outlets/{id}/edit-menu','MenuController@editMenuResto');
 
 Route::post('/edit-menu-yang-lama','MenuController@updatesNow');
+
+Route::get('/setting-profil-rumah-makan','ProfilController@resto');
+
+Route::post('/edit-profil-resto','ProfilController@editResto');
 
 });
 
@@ -82,6 +90,10 @@ Route::post('/create-article-now','ForumController@formPost');
 Route::post('/update-article-now','ForumController@update');
 
 Route::post('/buat-ahli-gizi-baru','AhliGiziController@create');
+
+Route::get('/delete/{id}','ForumController@delete');
+
+
 
 });
 
