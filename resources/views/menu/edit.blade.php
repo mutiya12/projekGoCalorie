@@ -44,7 +44,7 @@ Edit Menu
                 </div>
                 <div class="card-footer">
                     <input type="submit" value="{{ __('Edit Menu') }}" class="btn btn-primary">
-                    <a href="/menu-makanan" class="btn btn-danger float-right">{{ __('Batalkan') }}</a>
+                    <a href="/menu-makanan" class="btn btn-danger float-right">{{ __('Kembali') }}</a>
                 </div>
             </form>
         </div>
