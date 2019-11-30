@@ -38,7 +38,8 @@ class KaloriController extends Controller
             else if ($req->aktivitas=="c") {
                 $point = 2.00;
             }
-    		$BMR = 655.1 + (9.65*$req->BB) + (1.85*$req->TB) - (4.68*$req->UMUR) * $point;
+			$BMR = (655.1 + (9.65*$req->BB) + (1.85*$req->TB)- (4.68*$req->UMUR) ) * $point;
+			// (655.1 + (9.65*$req->BB) + (1.85*$req->TB) - (4.68*$req->UMUR))*$point;
     	}
 
     	$BMR_PAGI = $BMR*30/100;

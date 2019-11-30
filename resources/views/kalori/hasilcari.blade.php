@@ -9,7 +9,7 @@ Hasil Pencarian
 
 <div class="alert alert-info" role="alert">
   
-    <p><strong>Kebutuhan kalori : {{round($BMR)}}</strong></p>
+    <p><strong>Kebutuhan kalori : {{($BMR)}}</strong></p>
     <div class="row">
       <div class="col-md-4">Pagi : <strong>{{round($BMR_PAGI_kurang)}} - {{round($BMR_PAGI_lebih)}}</strong> kal </div>
       <div class="col-md-4">Siang :<strong>{{round($BMR_SIANG_kurang)}} - {{round($BMR_SIANG_lebih)}}</strong> kal </div>
@@ -43,9 +43,9 @@ Hasil Pencarian
   <img class="card-img-top" src="{{$mp->getAvatar()}}" alt="Card image cap" height="200px">
   <div class="card-body text-dark">
     <h5 class="card-title float-left">{{$mp->nama_makanan}}</h5>
-    <p class="float-right">{{$mp->harga_makanan}}</p><br>
+    <p class="float-right">Rp {{$mp->harga_makanan}}</p><br>
     <br>
-    <p class="text-center">Komposii</p>
+    <p class="text-center">Komposisi</p>
     <p class=""><strong>Kalori : {{$mp->getKalori()}}</strong></p>
     <p class=""><strong>Protein : {{$mp->getProtein()}}</strong></p>
     <p class=""><strong>Lemak : {{$mp->getLemak()}}</strong></p>
@@ -67,9 +67,9 @@ Hasil Pencarian
   <img class="card-img-top" src="{{$ms->getAvatar()}}" alt="Card image cap" height="200px">
   <div class="card-body text-dark">
     <h5 class="card-title float-left">{{$ms->nama_makanan}}</h5>
-    <p class="float-right">{{$ms->harga_makanan}}</p><br>
+    <p class="float-right">Rp {{$ms->harga_makanan}}</p><br>
     <br>
-    <p class="text-center">Komposii</p>
+    <p class="text-center">Komposisi</p>
     <p class=""><strong>Kalori : {{$ms->getKalori()}}</strong></p>
     <p class=""><strong>Protein : {{$ms->getProtein()}}</strong></p>
     <p class=""><strong>Lemak : {{$ms->getLemak()}}</strong></p>
@@ -95,9 +95,9 @@ Hasil Pencarian
   <img class="card-img-top" src="{{$mm->getAvatar()}}" alt="Card image cap" height="200px">
   <div class="card-body text-dark">
     <h5 class="card-title float-left">{{$mm->nama_makanan}}</h5>
-    <p class="float-right">{{$mm->harga_makanan}}</p><br>
+    <p class="float-right">Rp {{$mm->harga_makanan}}</p><br>
     <br>
-    <p class="text-center">Komposii</p>
+    <p class="text-center">Komposisi</p>
     <p class=""><strong>Kalori : {{$mm->getKalori()}}</strong></p>
     <p class=""><strong>Protein : {{$mm->getProtein()}}</strong></p>
     <p class=""><strong>Lemak : {{$mm->getLemak()}}</strong></p>
