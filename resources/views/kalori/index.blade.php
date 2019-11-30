@@ -60,7 +60,7 @@ Perhitungan
                 <div class="card-footer">
                     <input type="submit" value="{{ __('Hitung') }}" class="btn btn-primary">
                     
-                    <a href="/ahli-gizi" class="btn btn-danger float-right">{{ __('Batalkan') }}</a>
+                    <!-- <a href="/ahli-gizi" class="btn btn-danger float-right">{{ __('Batalkan') }}</a> -->
                 </div>
             </form>
         </div>

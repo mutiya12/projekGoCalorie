@@ -19,8 +19,9 @@
     </div>
     <div class="row justify-content-left">
         <div class="col-md-6">
-            <p style="font-family: Angeline Vintage ; font-size: 22px; color:#007944;">WELCOME!! Apa aktivitas kamu hari ini? perhatikan pola makan dengan makan makanan seimbang. Temukan rekomendasi makanan untuk makananmu hari ini.
-                 Dapatkan informasi mengenai makanan sehat juga di GoCalorie. </p>
+            <p style="font-family: Angeline Vintage ; font-size: 22px; color:#007944;">WELCOME!! “Mereka yang berpikir mereka tidak punya waktu 
+            untuk makan sehat, cepat atau lambat harus mencari waktu untuk sakit.” – Edward Stanley 
+         </p>
             
 
         </div>
