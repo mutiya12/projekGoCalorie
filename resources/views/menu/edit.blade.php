@@ -34,11 +34,11 @@ Edit Menu
 				    </div>
                     <div class="form-group">
                         <label for="name" class="control-label">Nama Menu</label>
-                        <input id="" type="text" class="form-control" name="nama" required value="{{$menu->nama_makanan}}">
+                        <input id="name" type="text" class="form-control" name="nama" required value="{{$menu->nama_makanan}}">
                     </div>
                     <div class="form-group">
-                        <label for="name" class="control-label">Harga Menu</label>
-                        <input id="" type="number" class="form-control" name="harga" required value="{{$menu->harga_makanan}}">
+                        <label for="harga" class="control-label">Harga Menu</label>
+                        <input id="harga" type="number" class="form-control" name="harga" required value="{{$menu->harga_makanan}}">
                     </div>
                     
                 </div>

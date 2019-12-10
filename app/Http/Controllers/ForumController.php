@@ -50,6 +50,6 @@ class ForumController extends Controller
     public function delete($id)
     {
         \App\Artikel::where('artikelid','=',$id)->delete();
-        return redirect()->back()->with('sukses','berhasi menghapus artikel');
+        return redirect()->back()->with('sukses','berhasil menghapus artikel');
     }
 }

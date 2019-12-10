@@ -40,15 +40,15 @@ Edit Profil
                     <h4 class="text-center">Ubah Password</h4>
                     <div class="form-group">
                         <label for="name" class="control-label">Password</label>
-                        <input id="" type="password" class="form-control" name="p1">
+                        <input id="password" type="password" minlength="6" class="form-control" name="p1">
                     </div>
                     <div class="form-group">
                         <label for="name" class="control-label">Ulangi Password</label>
-                        <input id="" type="password" class="form-control" name="p2">
+                        <input id="password" type="password" minlength="6" class="form-control" name="p2">
                     </div>
                 </div>
                 <div class="card-footer">
-                    <input type="submit" value="{{ __('Edit Menu') }}" class="btn btn-primary">
+                    <input type="submit" value="{{ __('Edit Profil') }}" class="btn btn-primary">
                     <a href="/menu-makanan" class="btn btn-danger float-right">{{ __('Batalkan') }}</a>
                 </div>
             </form>

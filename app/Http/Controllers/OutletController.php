@@ -73,6 +73,7 @@ class OutletController extends Controller
             'address'   => 'nullable|max:255',
             'latitude'  => 'nullable|required_with:longitude|max:15',
             'longitude' => 'nullable|required_with:latitude|max:15',
+            'password'   => 'nullable|min:6',
             // 'email' => 'required', 'string', 'email', 'max:255', 'unique:users'.
         ]);
 
@@ -91,13 +92,18 @@ class OutletController extends Controller
         $usr->password = bcrypt($request->password);
         $usr->name = $request->name;
 
-        $usr->save();
+        // $usr->save();
+
+        if($usr->save()){
+            $outlet = Outlet::create($newOutlet);
+            return redirect('/login');           
+        }else{
+            return redirect()->back()->with('gagal','test');
+        }
 
 
 
-        $outlet = Outlet::create($newOutlet);
-
-        return redirect('/login');
+        
     }
 
     public function show(Outlet $outlet)

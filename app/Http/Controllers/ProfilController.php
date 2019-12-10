@@ -67,6 +67,12 @@ class ProfilController extends Controller
 	    		]);	
 	    	return redirect()->back()->with('sukses','Berhasil mengubah data profil');
     	}else{
+
+			$newpass = $req->validate([
+				'password'   => 'nullable|min:6',
+				
+			]);
+			$newpass['isverify'] = 'no';
     		if ($req->p1==$req->p2) {
 				\App\AhliGizi::where('id','=',$req->idnya)
 		    		->update([

@@ -18,7 +18,7 @@ Input Komposisi
     @endif
 <div class="col-md-6 offset-3">
 <div class="card">
-    <div class="card-header">Form Pengisian Data Menu</div>
+    <div class="card-header">Form Pengisian Nutrisi Menu</div>
     <form method="POST" action="/store-kalori" accept-charset="UTF-8" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="card-body">
@@ -41,8 +41,8 @@ Input Komposisi
             </div>
         </div>
         <div class="card-footer">
-            <input type="submit" value="{{ __('Buat Menu') }}" class="btn btn-dark">
-            <a href="/outlets/{{$menu->restoran_id}}/menu" class="btn btn-danger float-right">{{ __('Batalkan') }}</a>
+            <input type="submit" value="{{ __('Simpan') }}" class="btn btn-dark">
+            <a href="/outlets/{{$menu->restoran_id}}/menu" class="btn btn-danger float-right">{{ __('Kembali') }}</a>
         </div>
     </form>
 </div>

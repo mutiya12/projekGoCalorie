@@ -4,7 +4,17 @@
 
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-md-6">
+        <div class="col-md-6">
+        @if(session('sukses'))
+    <div class="alert alert-success">
+        {{session('sukses')}}
+    </div>
+    @endif
+    @if(session('gagal'))
+    <div class="alert alert-danger">
+        {{session('gagal')}}
+    </div>
+    @endif
         <div class="card bg-light">
             <div class="card-header">Form Pengisian Data Restoran</div>
             <form method="POST" action="{{ route('outlets.store') }}" accept-charset="UTF-8">
@@ -17,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="name" class="control-label">Email Penanggung Jawab</label>
-                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                        <input id="name" type="email" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
                         {!! $errors->first('email', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <div class="form-group">
@@ -43,9 +53,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                                <label for="longitude" class="control-label">Password</label>
-                                <input id="longitude" type="password" name="password" class="form-control{{ $errors->has('longitude') ? ' is-invalid' : '' }}" name="longitude" value="{{ old('longitude', request('longitude')) }}" required>
-                                {!! $errors->first('longitude', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                                <label for="password" class="control-label">Password</label>
+                                <input id="password" type="password" name="password" min="6" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="longitude" value="{{ old('password') }}" required>
+                                {!! $errors->first('password', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                 </div>
                 <div class="card-footer">

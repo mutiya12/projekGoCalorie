@@ -6,7 +6,17 @@ Menu makanan
 
 
 @section('content')
-
+@if(session('sukses'))
+<div class="alert alert-success">
+    {{session('sukses')}}
+</div>
+@endif
+@if(session('gagal'))
+<div class="alert alert-danger">
+    {{session('gagal')}}
+</div>
+@endif
+<br>
 <div class="col-md-12" style="display: {{$status=="belum" ? "block" : "none"}}">
 	<div class="alert alert-danger">Restoran Anda Belum <strong>Terverifikasi</strong></div>
 </div>
@@ -25,6 +35,12 @@ Menu makanan
     <p class=""><strong>Karbohidrat : {{$m->getKarbohidrat()}}</strong></p>
 
     <a href="/outlets/{{$m->id}}/edit-menu" class="btn btn-dark float-right">Edit Menu</a>
+<form action="/deleteMenu/{{$m->id}}" method="POST">
+    {{ csrf_field() }}
+      <a href="" class="btn btn-dark float-right mr-3">Hapus</a>
+</form>
+    
+  
   </div>
 </div>
 @endforeach
