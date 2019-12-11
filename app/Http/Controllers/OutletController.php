@@ -67,7 +67,10 @@ class OutletController extends Controller
     public function store(Request $request)
     {
         // $this->authorize('create', new Outlet);
-
+        $cek = \App\User::where('email',$request->email)->first();
+        if(!empty($cek)){
+            return redirect()->back()->with('gagal','email telah digunakan');
+        }else{
         $newOutlet = $request->validate([
             'name'      => 'required|max:60',
             'address'   => 'nullable|max:255',
@@ -103,7 +106,7 @@ class OutletController extends Controller
 
 
 
-        
+        }
     }
 
     public function show(Outlet $outlet)

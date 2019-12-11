@@ -35,9 +35,9 @@ Menu makanan
     <p class=""><strong>Karbohidrat : {{$m->getKarbohidrat()}}</strong></p>
 
     <a href="/outlets/{{$m->id}}/edit-menu" class="btn btn-dark float-right">Edit Menu</a>
-<form action="/deleteMenu/{{$m->id}}" method="POST">
+<form action="" method="">
     {{ csrf_field() }}
-      <a href="" class="btn btn-dark float-right mr-3">Hapus</a>
+      <a href="/deleteMenu/{{$m->id}}" class="btn btn-dark float-right mr-3">Hapus</a>
 </form>
     
   

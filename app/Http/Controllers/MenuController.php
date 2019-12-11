@@ -12,7 +12,6 @@ class MenuController extends Controller
     	$user = Auth::user();
 
 
-
         $resto = \App\Outlet::where('user_id','=',$user->id)->first();
 
         if ($resto->isverify == "no") {
@@ -30,17 +29,19 @@ class MenuController extends Controller
     }
     public function store(Request $req)
     {
-        $namamenu = $req->validate([
-            'name'   => 'nullable|max:30',
+        // $namamenu = $req->validate([
+        //     'name'   => 'nullable|max:30',
             
-        ]);
-        $namamenu['isverify'] = 'no';
+        // ]);
+        // $namamenu['isverify'] = 'no';
+        
         $a1 = $req->file('gambar')->getClientOriginalName();
         if ((strpos($a1, "JPG") || strpos($a1, "png") || strpos($a1, "jpeg") || strpos($a1, "jpg")) == false) {
             return redirect()->back()->with('gagal','File harus berupa png, jpg, jpeg');
-        } elseif (post_max) {
-            # code...
-        }
+        } 
+        // elseif (post_max) {
+        // //     # code...
+        // }
         else{
     	$user = Auth::user();
         $resto = \App\Outlet::where('user_id','=',$user->id)->first();
@@ -62,6 +63,7 @@ class MenuController extends Controller
 
     	return redirect('/menu-makanan');
     }
+
     }
     public function lokasiTinjau()
     {
@@ -98,11 +100,6 @@ class MenuController extends Controller
     {
         // $a1 = $req->file('gambar')->getClientOriginalName();
 
-        $namamenu = $req->validate([
-            'name'   => 'nullable|max:30',
-            
-        ]);
-        $namamenu['isverify'] = 'no';
         $gbrMakanan = $req->file('gambar');
         if($gbrMakanan != ""){
             $a1 = $gbrMakanan->getClientOriginalName();
@@ -151,3 +148,5 @@ class MenuController extends Controller
         // return view('menu.edit',compact('menu'));
     }
 }
+
+

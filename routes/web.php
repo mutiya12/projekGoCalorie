@@ -72,7 +72,7 @@ Route::get('/setting-profil-rumah-makan','ProfilController@resto');
 
 Route::post('/edit-profil-resto','ProfilController@editResto');
 
-Route::post('/deleteMenu/{id}','MenuController@delete');
+Route::get('/deleteMenu/{id}','MenuController@delete');
 
 
 });

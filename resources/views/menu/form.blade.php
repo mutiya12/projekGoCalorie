@@ -26,11 +26,11 @@ Buat Menu
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name" class="control-label">Nama Menu</label>
-                        <input id="name" type="text" class="form-control" name="nama" required>
+                        <input type="text" class="form-control" name="nama" required maxlength="50">
                     </div>
                     <div class="form-group">
                         <label for="harga" class="control-label">Harga Menu</label>
-                        <input id="harga" type="number" class="form-control" name="harga" required>
+                        <input type="number" class="form-control" name="harga" required>
                     </div>
                     <div class="form-group">
 					    <label>Gambar Menu</label>
